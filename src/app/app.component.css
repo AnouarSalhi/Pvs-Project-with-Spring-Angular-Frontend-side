@@ -1,0 +1,12 @@
+.form-control{
+    height: 110px;
+    width: 100px;
+}
+input{
+    height: 110px;
+}
+
+.form-control, .form-select{
+    height: 30px;
+   
+}

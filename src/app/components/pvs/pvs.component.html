@@ -1,0 +1,43 @@
+<section class="intro">
+    <span class="text mr-5"> جميع المحاضر</span>
+    <div class="gradient-custom-1 h-100">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="table-responsive bg-white">
+                
+                <table class="table  mb-0">
+                    
+                  <thead style="border:1px solid  #bedefa;">
+                    <tr>
+                      <th scope="col">رقم المحضر</th>
+                      <th scope="col ">ضد شخص مجهول </th>
+                      <th scope="col">تاريخ المحضر</th>
+                      <th scope="col">ساعة الانجاز</th>
+                      <th scope="col">رقم الارسالية</th>
+                      <th scope="col">رقم محضر الضابطة القضائية</th>
+                      <th scope="col"> صنف الضابطة القضائية</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let pv of pvs">
+                      <th scope="row" style="color: #666666;">{{pv.id}}</th>
+                      <td>{{pv.contreInnconue}}</td>
+                      <td>{{pv.datePvs}}</td>
+                      <td>{{pv.heureRealisation}}</td>
+                      <td>{{pv.numEnvoi}}</td>
+                      <td>{{pv?.sourcePvs?.nom}}</td>
+                      <td>{{pv?.typePoliceJudic?.nom}}</td>
+                    </tr>
+                 
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
