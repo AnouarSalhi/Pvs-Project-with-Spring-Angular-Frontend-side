@@ -11,8 +11,10 @@ export class Pv {
     heureRealisation?:string;
     contreInnconue?:boolean;
     subjectPv?:string;
-    typeSourcePvs?:{};
-    sourcePvs?:{};
-    typePoliceJudic?:object;
+    typeSourcePvs?:TypeSourcePv;
+    sourcePvs?:SourcePvs;
+    typePoliceJudic?:TypePoliceJudic;
+    dataParties?:object[];
+    uuid?:string;
 }
 

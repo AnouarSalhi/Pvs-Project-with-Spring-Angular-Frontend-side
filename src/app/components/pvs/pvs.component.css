@@ -12,20 +12,21 @@ body,
     border-radius: 20px;
 }
 
-table td,
-table th {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.cardHeader{
+  background: #eef6fe;
+  color: #428bca;
 }
-tbody td {
-  font-weight: 500;
-  color: #999999;
-}
-thead{
-    background: #eef6fe;
-    color: #428bca;
-}
+
 .text{
     color: gray;
 } 
+
+.yes, .no{
+  background-color: #428bca;
+  color: #eef6fe;
+}
+.buttn i{
+  font-size: 15px;
+  margin-right: 10px;
+}
+

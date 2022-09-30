@@ -1,9 +1,6 @@
-<span class="text mr-5">اطراف المحضر</span>
-<div class="card mt-4 mb-3">  
-   <div class="card-header cardHeader">
-     المرجع
-   </div>
-         
+
+<div class=" mb-2">  
+
    <div class="card-body">
        <form class="form-inline">
             <div class="row">
@@ -59,94 +56,94 @@
             </div>
             <div class="row">
                 <div class="form-group col-md-3">
-                    <label class="mb-2">الاسم الشخصي</label>
+                    <label class="mb-1 mt-1">الاسم الشخصي</label>
                    <input [(ngModel)]="dataParties.nom"  name="name" type="text" class="form-control">
                 </div> 
                 <div class="form-group col-md-3">
-                    <label class="mb-2"> الاسم العائلي</label>
+                    <label class="mb-1 mt-1"> الاسم العائلي</label>
                    <input [(ngModel)]="dataParties.prenom"  name="prenom" type="text" class="form-control">
                 </div> 
                 <div class="form-group col-md-3">
-                    <label class="mb-2"> نوع وثيقة التعريف </label>
+                    <label class="mb-1 mt-1"> نوع وثيقة التعريف </label>
                    <input  name="subjectPv" type="text" class="form-control">
                 </div> 
                 <div class="form-group col-md-3">
-                    <label class="mb-2"> رقم وثيقة التعريف</label>
-                   <input  name="subjectPv" type="text" class="form-control">
+                    <label class="mb-1 mt-1"> رقم وثيقة التعريف</label>
+                   <input  [(ngModel)]="dataParties.numCart"  name="numCart" type="text" class="form-control">
                 </div> 
-
+                
                 <div class="form-group col-md-3">
-                    <label class="mb-2">اسم الاب</label>
+                    <label class="mb-1 mt-1">اسم الاب</label>
                    <input [(ngModel)]="dataParties.nomDePere"   name="nomDePere" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2">ابن</label>
+                    <label class="mb-1 mt-1">ابن</label>
                    <input  [(ngModel)]="dataParties.filsDe"  name="filsDe" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2">اسم الأم</label>
+                    <label class="mb-1 mt-1">اسم الأم</label>
                    <input [(ngModel)]="dataParties.nomDeMere"  name="nomDeMere" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2">بنت</label>
+                    <label class="mb-1 mt-1">بنت</label>
                    <input [(ngModel)]="dataParties.filleDe"  name="filleDe" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                       <label class="mb-2">   العائلية الحالة</label>
+                       <label class="mb-1 mt-1">   العائلية الحالة</label>
                         <select [(ngModel)]="dataParties.situationFamils" name="situationFamils" class="form-select d-inline-block" aria-label="Default select example">
                             <option selected></option> 
-                            <option [ngValue]="1">اعزب</option>
-                            <option [ngValue]="2">متزوج</option>
+                            <option [ngValue]="">اعزب</option>
+                            <option [ngValue]=2>متزوج</option>
                          
                         </select>
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2"> المهنة </label>
+                    <label class="mb-1 mt-1"> المهنة </label>
                    <input [(ngModel)]="dataParties.profession"  name="profession" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2"> مقر العمل </label>
+                    <label class="mb-1 mt-1"> مقر العمل </label>
                    <input [(ngModel)]="dataParties.lieuDeTravail"   name="lieuDeTravail" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2"> الرقم الحالي </label>
+                    <label class="mb-1 mt-1"> الرقم الحالي </label>
                    <input  name="subjectPv" type="text" class="form-control">
                 </div> 
 
                 <div class="form-group col-md-3">
-                    <label class="mb-2">تاريخ الازدياد</label>
+                    <label class="mb-1 mt-1">تاريخ الازدياد</label>
                    <input [(ngModel)]="dataParties.dateNaiss" name="dateNaiss" type="date" class="form-control">
                 </div>
            
                 <div class="form-group col-md-3">
-                    <label class="mb-2">    مدينة الازدياد</label>
-                    <select [(ngModel)]="dataParties.villeDeNaisses" name="villeDeNaisses" class="form-select d-inline-block" aria-label="Default select example">
-                        <option selected></option> 
-                        <option value="1"></option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <label class="mb-1 mt-1">    مدينة الازدياد</label>
+                    <select  [(ngModel)]="villeNaiss.nom"  name="villeNaiss" class="form-select" aria-label="Default select example">
+                    
+                        <option selected></option>
+                        <option *ngFor="let v of villeNaiss" [ngValue]="v">{{v.nom}}</option>
+                        
                     </select>
             </div> 
 
          <div class="form-group col-md-3">
-            <label class="mb-2">  مكان الازدياد </label>
+            <label class="mb-1 mt-1">  مكان الازدياد </label>
            <input  name="subjectPv" type="text" class="form-control">
         </div> 
 
         <div class="form-group col-md-3">
-            <label class="mb-2">  الجنسية  </label>
+            <label class="mb-1 mt-1">  الجنسية  </label>
            <input [(ngModel)]="dataParties.nationalites"  name="nationalites" type="text" class="form-control">
         </div> 
 
         <div class="form-group col-md-3">
-            <label class="mb-2">     البلد</label>
+            <label class="mb-1 mt-1">     البلد</label>
             <select class="form-select d-inline-block" aria-label="Default select example">
                 <option selected></option> 
                 <option value="1"></option>
@@ -157,11 +154,11 @@
 
     
     <div class="form-group col-md-3">
-        <label class="mb-2">   المدينة </label>
+        <label class="mb-1 mt-1">   المدينة </label>
        <input  name="subjectPv" type="text" class="form-control">
     </div> 
     <div class="form-group col-md-3">
-        <label class="mb-2">   العنوان </label>
+        <label class="mb-1 mt-1">   العنوان </label>
        <input  name="subjectPv" type="text" class="form-control">
     </div> 
     </div>
@@ -172,5 +169,5 @@
    
 </div>
 
-<input (click)="addDataParties()"   value="اضافة الطرف" class="btn btn-primary mb-5 butt" >
-<input   value="الغاء " class="btn btn-primary mb-5 butt butt2" routerLink="/addpv">
+<input (click)="addDataPartiesLocaly1()"   value="اضافة الطرف" class="btn btn-primary mb-2 butt" data-bs-dismiss="modal" aria-label="Close">
+<input   value="الغاء " class="btn btn-primary mb-2 butt butt2" data-bs-dismiss="modal" aria-label="Close">
